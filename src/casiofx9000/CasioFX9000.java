@@ -7,6 +7,7 @@ package casiofx9000;
 
 import Equations.PTBac1;
 import Equations.PTBac2;
+import Equations.PTBac3;
 import java.util.Scanner;
 
 /**
@@ -47,8 +48,8 @@ public class CasioFX9000 {
             System.out.println("|-- Nhap Lua Chon:                                      |");
             System.out.println("| 1: Giai Phuong Trinh Bac 1                            |");
             System.out.println("| 2: Giai Phuong Trinh bac 2                            |");
-            System.out.println("| 2: Giai Phuong Trinh bac 3                            |");
-            System.out.println("| 2: Giai Phuong Trinh bac 4                            |");
+            System.out.println("| 3: Giai Phuong Trinh bac 3                            |");
+            System.out.println("| 4: Giai Phuong Trinh bac 4                            |");
             System.out.println("| 5: exit                                               |");
             System.out.println("|-------------------------------------------------------|");
             System.out.print("Lua Chon: ");
@@ -86,6 +87,25 @@ public class CasioFX9000 {
                     p2.solve();
                     break;
                     
+                }
+                case 3:{
+                    float a;
+                    float b;
+                    float c;
+                    float d;
+                    System.out.println("--------PT bac 3: ax^3 + bx^2 + cx + d = 0-----------");
+                    System.out.print("Enter a: ");
+                    a = new Scanner(System.in).nextFloat();
+                    System.out.print("Enter b: ");
+                    b = new Scanner(System.in).nextFloat();
+                    System.out.print("Enter c: ");
+                    c = new Scanner(System.in).nextFloat();
+                    System.out.print("Enter d: ");
+                    d = new Scanner(System.in).nextFloat();
+                    PTBac3 p3 = new PTBac3(a, b, c, d);
+                    System.out.println("Result: ");
+                    p3.solve();
+                    break;
                 }
             }
             
