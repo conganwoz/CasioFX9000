@@ -8,6 +8,7 @@ package casiofx9000;
 import Equations.PTBac1;
 import Equations.PTBac2;
 import Equations.PTBac3;
+import Equations.PTBac4;
 import java.util.Scanner;
 
 /**
@@ -105,6 +106,28 @@ public class CasioFX9000 {
                     PTBac3 p3 = new PTBac3(a, b, c, d);
                     System.out.println("Result: ");
                     p3.solve();
+                    break;
+                }
+                case 4:{
+                    float a;
+                    float b;
+                    float c;
+                    float d;
+                    float e;
+                    System.out.println("-------PT bac 4: ax^4 + ax^3 + bx^2 + cx + d = 0-----------");
+                    System.out.print("Enter a: ");
+                    a = new Scanner(System.in).nextFloat();
+                    System.out.print("Enter b: ");
+                    b = new Scanner(System.in).nextFloat();
+                    System.out.print("Enter c: ");
+                    c = new Scanner(System.in).nextFloat();
+                    System.out.print("Enter d: ");
+                    d = new Scanner(System.in).nextFloat();
+                    System.out.print("Enter e: ");
+                    e = new Scanner(System.in).nextFloat();
+                    PTBac4 p4 = new PTBac4(a, b, c, d, e);
+                    System.out.println("Result: ");
+                    p4.solve();
                     break;
                 }
             }

@@ -29,9 +29,10 @@ public class PTBac2 extends PTBac1{
         this.c = c;
     }
     @Override
-    public void solve(){
+    public float[] solve(){
+        float[] values = null;
         if(c == 0){
-            super.solve();
+            values = super.solve();
         }else {
             
             //////////////////////
@@ -48,11 +49,16 @@ public class PTBac2 extends PTBac1{
                 System.out.println("x1 = "+(-b/(2*this.c))+" - "+sqDelta+"i");
                 
             }else if(delta == 0){
+                values = new float[1];
                 x1 = -(b/(2*this.c));
+                values[0] = x1;
                 System.out.println("PT co nghiem kep: "+x1);
             }else {
+                values = new float[2];
                 x1 = (float)(-b + Math.sqrt(delta))/(2*this.c);
                 x2 = (float)(-b - Math.sqrt(delta))/(2*this.c);
+                values[0] = x1;
+                values[1] = x2;
                 System.out.println("PT co 2 nghiem: ");
                 System.out.println("x1 = "+x1);
                 System.out.println("x1 = "+x2);
@@ -61,6 +67,7 @@ public class PTBac2 extends PTBac1{
             
             
         }
+        return values;
     }
     
 }

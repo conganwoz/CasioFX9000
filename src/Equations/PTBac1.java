@@ -39,8 +39,9 @@ public class PTBac1 {
         this.b = b;
     }
     
-    public void solve(){
+    public float[] solve(){
         float result = 0;
+        float[] values = null;
         if(b == 0){
             if(a == 0){
                 System.out.println("PT co Vo So Nghiem");
@@ -48,8 +49,12 @@ public class PTBac1 {
                 System.out.println("PT Vo Nghiem");
             }
         }else {
+            values = new float[1];
             System.out.println("Nghiem cua PT la: "+(float)(-a)/b);
+            values[0] = (float)(-a)/b;
+            
         }
+        return values;
     }
     @Override
     public String toString(){
